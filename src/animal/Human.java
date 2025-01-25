@@ -9,8 +9,7 @@ public class Human extends Animal implements Thinkable{
     }
 
     public Human(String name, int age, String hobby) {
-        super.setName(name);
-        super.setAge(age);
+        super(name,age);
         this.hobby = hobby;
     }
 
@@ -23,6 +22,7 @@ public class Human extends Animal implements Thinkable{
         this.hobby = hobby;
     }
 
+    @Override
     public void think() {
         System.out.println("私は" + hobby + "について考えています。");
     }
